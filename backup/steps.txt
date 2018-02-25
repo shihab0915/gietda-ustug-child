@@ -1,0 +1,6 @@
+1. install node
+2. npm init
+3. add package.jason to REPO/Staging/Add/Commit/Push
+4. install gulp
+5. install gulp-watch
+6. 
