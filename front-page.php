@@ -72,17 +72,20 @@ get_header(); ?>
 </div>
 <!-- /.carousel -->
 
-<div id="main" class="large-8 columns">
 
-	<?php do_action( 'hrb_front_loops' ); ?>
+<div class="row">
+    <div id="main" class="large-8 columns">
 
-</div><!-- end #main -->
+        <?php do_action( 'hrb_front_loops' ); ?>
 
-<div id="sidebar" class="large-4 columns">
+    </div><!-- end #main -->
 
-	<div class="sidebar-widget-wrap cf">
-		<?php get_sidebar( app_template_base() ); ?>
-	</div><!-- end .sidebar-widget-wrap -->
 
-</div><!-- end #sidebar -->
+    <div id="sidebar" class="large-4 columns">
 
+        <div class="sidebar-widget-wrap cf">
+            <?php get_sidebar( app_template_base() ); ?>
+        </div><!-- end .sidebar-widget-wrap -->
+
+    </div><!-- end #sidebar -->
+</div>

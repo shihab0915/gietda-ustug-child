@@ -1,0 +1,10 @@
+buyers:
+    Username:   marlene   
+    Email:      marlene-mcbride@gmail.com
+    Password:   *4T*gw9S*gwq98EX82
+    
+    
+sellers:
+    Username:   diane   
+    Email:      diane1984@gmail.com
+    Password:   cUNt5OAzH(e%vqdpDh

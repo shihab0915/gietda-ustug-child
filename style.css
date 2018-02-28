@@ -10,7 +10,10 @@ Template: gietda-ustug
 @import url("../gietda-ustug/style.css");
 @import url("../gietda-ustug/styles/modern.css");
 
-
+.navbar-default{
+    background: #061450;
+    border-color: #000620;
+}
 .site-header{
     background: #2432d9;
 }
@@ -45,13 +48,44 @@ Template: gietda-ustug
 }
 
 .hrb-notifications{
-    list-style: none
+    list-style: none;
 }
+.navbar-default .navbar-nav>li>a{
+    color: #FFF;
+    
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #FFF;
+}
+@media only screen and (max-width: 767px){
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+    color: #FFF;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color: #FFF;
+    }
+}
+
+@media only screen and (min-width: 767px){
+    .navbar-default{position: relative}
+    .hrb-notifications{
+        position: fixed;
+        right: 5px;
+        top: 5px;
+    }
+    .right_menu{
+        margin-right: 50px;
+    }
+}
+
 .top-bar-section li a:not(.button){
     background: #f8f8f8;
+    color: #FFF;
 }
 .top-bar-section ul li:hover>a{
-    background: #4D728C !important;
+    background: #061450 !important;
+    color: #FFF;
 }
 
 .top-bar-section ul{
@@ -62,6 +96,7 @@ Template: gietda-ustug
 }
 .top-bar-section li a:not(.button){
     padding: 0 7px;
+    background: #061450;
 }
 
 @media only screen and (max-width: 767px) {
@@ -106,7 +141,21 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     background: rgba(255, 255, 255, .6);
 }
 .button, .button[disabled]{
-    background-color: #4D728C;
+    background-color: #061450;
+}
+.button:hover, .button[disabled]:hover{
+    background-color: #040d34;
+}
+/* Search Button */
+.search-button button, .sidebar-archive .section-head input[type="submit"]{
+    background: url('images/icon-search.png') #061450 center center no-repeat;
+}
+.search-button button:hover{
+    background: url('images/icon-search.png') #040d34 center center no-repeat
+}
+/* Create a project button*/
+.widget_create_project_button .button{
+    background: #061450;
 }
 .headline{
     margin-top: .8rem;
@@ -139,8 +188,21 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   }
 }
 
+/* HEADER BACKGROUND */
+.full-width .content-header{
+    background: #030b2e !important;
+}
+
+/* Content Header */
+.full-width .content-header h3{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
 
 
+
+/*    FOOTER    */
 
 
 

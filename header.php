@@ -35,7 +35,7 @@
             <li><a href="#">FAQ</a></li>
             <li><a href="#">Terms of Use</a></li>
             <li class="divider"></li>
-            <li><a href="#">Categories</a></li>
+            <li><a href="<?php echo site_url('/categories'); ?>">Categories</a></li>
           </ul>
             <li><a href="#">
                 <section class="top-bar-section">
@@ -48,9 +48,9 @@
         
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Categories</a></li>
-        <li><a href="#">Blog</a></li>	        
+      <ul class="nav navbar-nav navbar-right right_menu">
+           <li><a href="#">How it Works</a></li>
+           <li><a href="<?php echo site_url('/categories'); ?>">Categories</a></li>    
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
