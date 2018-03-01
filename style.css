@@ -10,12 +10,15 @@ Template: gietda-ustug
 @import url("../gietda-ustug/style.css");
 @import url("../gietda-ustug/styles/modern.css");
 
+.bold{font-weight: bold}
 .navbar-default{
     background: #061450;
     border-color: #000620;
 }
 .site-header{
     background: #2432d9;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 .navbar{
     margin-bottom: 0px;
@@ -34,9 +37,16 @@ Template: gietda-ustug
 }
 #logo{
     position: absolute;
-    top: 0;
-    max-width: 50px;
-    max-height: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+    max-width: 120px;
+    height: auto;
+}
+@media only screen and (max-width: 767px){
+    #logo{
+        max-width: 85px;
+    }
 }
 #menu_icon{
     max-width: 30px;
@@ -67,16 +77,23 @@ Template: gietda-ustug
     }
 }
 
+@media only screen and (max-width: 767px){
+    .top-bar-section li a:not(.button) {
+        padding: 8px 7px !important;
+        border-bottom: 1px solid gray;
+    }
+}
 @media only screen and (min-width: 767px){
+/*
     .navbar-default{position: relative}
-    .hrb-notifications{
-        position: fixed;
-        right: 5px;
-        top: 5px;
+    .top-bar-section ul li.hrb-notifications{
+        position: absolute;
+        
     }
     .right_menu{
         margin-right: 50px;
     }
+*/
 }
 
 .top-bar-section li a:not(.button){
@@ -137,6 +154,9 @@ Template: gietda-ustug
   	top:30%;
     background: rgba(0, 0, 0, .6);
 }
+@media only screen and (max-width: 767px){
+    #searchForm{top: 10%;}
+}
 input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea{
     background: rgba(255, 255, 255, .6);
 }
@@ -166,12 +186,21 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .headline--welcome{
     color: #FFF; 
 }
+@media only screen and (max-width: 767px){
+    .headline{
+        font-size: 2rem;
+    }
+}
+
 .sub-title{
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
     color: #FFF;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     letter-spacing: .6px;
+}
+@media only screen and (max-width: 767px){
+    .sub-title{font-size: 1rem;}
 }
 /* RESPONSIVE CSS
 -------------------------------------------------- */

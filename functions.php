@@ -5,6 +5,7 @@ function shihab_files() {
     wp_enqueue_style( 'normalizecss', get_theme_file_uri('/css/normalize.css') );
     wp_enqueue_style( 'bootstrapcss', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
+    wp_enqueue_style( 'railway-font', '//fonts.googleapis.com/css?family=Raleway:300,400' );
     
     
     wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-3.2.1.slim.min.js', true );

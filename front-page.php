@@ -40,7 +40,7 @@ get_header(); ?>
 
 <form class="col-sm-12" id="searchForm">
 <div class="search_welcom text-center">
-    <h1 class="headline headline--welcome">Welcome to Company Name!</h1>
+    <h1 class="headline headline--welcome">Welcome to Gietda Ustug!</h1>
     <p class="sub-title">Do you want order a job or you need any help? Enter your command in the box bellow we will find a contractor.</p>
 </div>
 
@@ -71,6 +71,38 @@ get_header(); ?>
   </a>  
 </div>
 <!-- /.carousel -->
+
+
+<!-- Expariment-->
+<div class="cat_icons">  
+ <?php 
+    $custom_terms = get_terms('project_category');
+
+    foreach($custom_terms as $custom_term) {
+        wp_reset_query();
+        $args = array('post_type' => 'project',
+                      'posts_per_page' => -1,
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'project_category',
+                    'field' => 'slug',
+                    'terms' => $custom_term->slug,
+                ),
+            ),
+         );
+
+         $loop = new WP_Query($args);
+         if($loop->have_posts()) {
+            echo '<h2>'.$custom_term->name.'</h2>';
+
+            while($loop->have_posts()) : $loop->the_post();
+                echo '<a href="'.get_permalink().'">'.get_the_title().'</a><br>';
+            endwhile;
+         }
+    } 
+?>
+</div>
+<!-- Expariment end-->
 
 
 <div class="row">

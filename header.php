@@ -18,7 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="navbar-brand navbar-brand-centered"><a href="<?php echo site_url(); ?>"><img id="logo" class="img-responsive" src="<?php echo get_theme_file_uri('images/logo.png'); ?>"></a></div>
+      <div class="navbar-brand navbar-brand-centered"><a href="<?php echo site_url(); ?>"><img id="logo" class="img-responsive" src="<?php echo get_theme_file_uri('images/logo.jpg'); ?>"></a></div>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,9 +48,10 @@
         
       </ul>
 
-      <ul class="nav navbar-nav navbar-right right_menu">
-           <li><a href="#">How it Works</a></li>
-           <li><a href="<?php echo site_url('/categories'); ?>">Categories</a></li>    
+      <ul class="nav navbar-nav navbar-right">
+           <li><a href="<?php echo site_url('/how-it-works'); ?>">How it Works</a></li>
+           <li><a href="<?php echo site_url('/categories'); ?>">Categories</a></li>
+           <li><a href="<?php echo site_url('/post-a-project'); ?>"><button type="button" class="btn btn-primary bold">Post a Job</button></a></li> 
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
