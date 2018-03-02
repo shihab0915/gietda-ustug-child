@@ -19,16 +19,6 @@ function shihab_files() {
 }
 add_action( 'wp_enqueue_scripts', 'shihab_files' );
 
- 
-
-
-
-
-
-
-
-
-
 
 
 

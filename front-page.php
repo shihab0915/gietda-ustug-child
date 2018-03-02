@@ -73,51 +73,41 @@ get_header(); ?>
 <!-- /.carousel -->
 
 
-<!-- Expariment-->
-<div class="cat_icons">  
- <?php 
-    $custom_terms = get_terms('project_category');
-
-    foreach($custom_terms as $custom_term) {
-        wp_reset_query();
-        $args = array('post_type' => 'project',
-                      'posts_per_page' => -1,
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'project_category',
-                    'field' => 'slug',
-                    'terms' => $custom_term->slug,
-                ),
-            ),
-         );
-
-         $loop = new WP_Query($args);
-         if($loop->have_posts()) {
-            echo '<h2>'.$custom_term->name.'</h2>';
-
-            while($loop->have_posts()) : $loop->the_post();
-                echo '<a href="'.get_permalink().'">'.get_the_title().'</a><br>';
-            endwhile;
-         }
-    } 
-?>
+<!-- Project Categories -->
+<div class="container">
+    <div class="row clearfix">
+        <?php        
+        foreach (get_terms('project_category', array('parent' => 0)) as $cat) : ?>
+        <a href="<?php echo get_term_link($cat->slug, 'project_category'); ?>">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 single-box">
+                <img class="center-block" src="<?php echo z_taxonomy_image_url($cat->term_id, 'thumbnail'); ?>" />
+                <p><?php echo $cat->name; ?></p>
+            </div>
+        </a>
+        <?php endforeach; ?>
+        
+    </div>
+    <div class="row see-all">
+        <a href="<?php echo site_url('/categories'); ?>">See All Categories</a>
+    </div>
 </div>
-<!-- Expariment end-->
+<!-- Project Categories end-->
+
+<div class="container">
+    <div class="row">
+        <div id="main" class="large-8 columns">
+
+            <?php do_action( 'hrb_front_loops' ); ?>
+
+        </div><!-- end #main -->
 
 
-<div class="row">
-    <div id="main" class="large-8 columns">
+        <div id="sidebar" class="large-4 columns">
 
-        <?php do_action( 'hrb_front_loops' ); ?>
+            <div class="sidebar-widget-wrap cf">
+                <?php get_sidebar( app_template_base() ); ?>
+            </div><!-- end .sidebar-widget-wrap -->
 
-    </div><!-- end #main -->
-
-
-    <div id="sidebar" class="large-4 columns">
-
-        <div class="sidebar-widget-wrap cf">
-            <?php get_sidebar( app_template_base() ); ?>
-        </div><!-- end .sidebar-widget-wrap -->
-
-    </div><!-- end #sidebar -->
+        </div><!-- end #sidebar -->
+    </div>
 </div>

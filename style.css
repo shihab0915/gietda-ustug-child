@@ -10,6 +10,18 @@ Template: gietda-ustug
 @import url("../gietda-ustug/style.css");
 @import url("../gietda-ustug/styles/modern.css");
 
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .bold{font-weight: bold}
 .navbar-default{
     background: #061450;
@@ -229,9 +241,31 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     font-size: 1.8rem;
 }
 
+/*    FRONT PAGE CATEGORY LOOP    */
+
+.single-box{
+    border: 1px solid #e0e0e0;
+}
+.single-box img{ max-width: 70px; height: auto; padding-top: .5rem; }
+.single-box p{ text-align: center; color: #061450; transition: all 0.8s ease-out; }
+.single-box p:hover{ 
+    font-weight: bold;  
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .22); 
+}
+.single-box {
+  transition: box-shadow 0.6s linear;
+}
+.single-box:hover { box-shadow: 0px 0px 0px 3px #C6CBD5; }
+.see-all{ margin: 2rem 0; text-align: center; }
+.see-all a{ 
+    border: 2px solid #e0e0e0; padding: .4rem 3rem; color: #061450; 
+    font-family: 'Raleway', sans-serif; font-weight: bold;
+}
+.see-all a:hover{
+    border: 2px solid #061450; text-decoration: none;
+}
 
 
-/*    FOOTER    */
 
 
 
