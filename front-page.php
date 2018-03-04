@@ -74,8 +74,9 @@ get_header(); ?>
 
 
 <!-- Project Categories -->
-<div class="container">
+<div class="container section">
     <div class="row cat_holder ini-pos clearfix">
+       <h1 class="headline text-center">Top Categories</h1>
         <?php        
         foreach (get_terms('project_category', array('parent' => 0)) as $cat) : ?>
         <a href="<?php echo get_term_link($cat->slug, 'project_category'); ?>">
@@ -92,6 +93,17 @@ get_header(); ?>
     </div>
 </div>
 <!-- Project Categories end-->
+
+<!-- HOW IT WORKS -->
+<section class="container-fluid well" style="margin-bottom: 30px;">
+  <h1 class="headline text-center">How it Works</h1>
+   <div class="col-sm-3">the cow</div>
+   <div class="col-sm-3">the dog</div>
+   <div class="col-sm-3">the man</div>
+   <div class="col-sm-3">the woman</div>
+    
+</section>
+<!-- HOW IT WORKS END -->
 
 <div class="container">
     <div class="row">

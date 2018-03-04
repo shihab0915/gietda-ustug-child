@@ -262,6 +262,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .see-all a:hover{
     border: 2px solid #061450; text-decoration: none;
 }
+.section{ margin-bottom: 5rem; }
+@media only screen and (max-width: 767px){
+    .section{ margin-bottom: 2rem; }
+}
 .ini-pos{
     opacity: 0;
     transition: all 0.8s ease-out;
