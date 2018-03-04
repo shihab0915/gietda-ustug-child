@@ -75,7 +75,7 @@ get_header(); ?>
 
 <!-- Project Categories -->
 <div class="container">
-    <div class="row clearfix">
+    <div class="row cat_holder ini-pos clearfix">
         <?php        
         foreach (get_terms('project_category', array('parent' => 0)) as $cat) : ?>
         <a href="<?php echo get_term_link($cat->slug, 'project_category'); ?>">
