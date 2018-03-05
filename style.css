@@ -195,6 +195,9 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
 }
+.headline--bold{
+    font-weight: 700;
+}
 .headline--welcome{
     color: #FFF; 
 }
@@ -271,10 +274,39 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     transition: all 0.8s ease-out;
 }
 
+/* FRONT PAGE HOW IT WORKS */
+.how_it_works{margin-bottom: 2rem;}
+.section-howitworks img{ max-width: 100px; height: auto;}
+.section-howitworks h6{ text-align: center; }
 
+/* More than 767px */
+@media (min-width: 767px){
+    .col-container { display: flex; align-items: baseline; }
+}
+.col { flex: 1; }
 
-
-
-
-
+.find{
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+}
+.hire{
+    animation-duration: 1.3s;
+    -webkit-animation-duration: 1.3s;
+    -moz-animation-duration: 1.3s;
+    -ms-animation-duration: 1.3s;
+}
+.work{
+    animation-duration: 1.7s;
+    -webkit-animation-duration: 1.7s;
+    -moz-animation-duration: 1.7s;
+    -ms-animation-duration: 1.7s;
+}
+.pay{
+    animation-duration: 2.2s;
+    -webkit-animation-duration: 2.2s;
+    -moz-animation-duration: 2.2s;
+    -ms-animation-duration: 2.2s;
+}
 
