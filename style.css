@@ -8,7 +8,20 @@ Template: gietda-ustug
 */
 
 @import url("../gietda-ustug/style.css");
+@import url("../gietda-ustug/styles/dark.css");
+
+
+
+
+
+/*
+
 @import url("../gietda-ustug/styles/modern.css");
+
+@import url("../gietda-ustug/styles/water.css");
+@import url("../gietda-ustug/styles/urban.css");
+@import url("../gietda-ustug/styles/green.css");
+*/
 
 *{
     box-sizing: border-box;
@@ -309,4 +322,14 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     -moz-animation-duration: 2.2s;
     -ms-animation-duration: 2.2s;
 }
+
+/* POST A PROJECT */
+span.prefix, label.prefix{
+    border-right: 1px solid #e0e4ee;
+}
+span.selected-currency{
+    width: 31px;
+}
+
+
 

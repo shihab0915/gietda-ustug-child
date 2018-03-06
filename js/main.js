@@ -54,8 +54,11 @@ jQuery(document).ready(function($){
     pay.waypoint(function() {
         pay.addClass("animated slideInUp");
         pay.css('visibility', 'visible');
-    }, {offset: '70%'});      
+    }, {offset: '70%'});
     
+    
+// Post a Project
+    $("fieldset .collapse").removeClass("collapse");
     
     
 });
