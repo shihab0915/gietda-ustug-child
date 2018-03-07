@@ -4,7 +4,7 @@ get_header(); ?>
 <!-- Carousel
 ================================================== -->
 
-<div id="myCarousel" class="carousel slide">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -13,14 +13,14 @@ get_header(); ?>
   </ol>
   <div class="carousel-inner">
     <div class="item active">
-      <img src="<?php echo get_theme_file_uri('/images/repairs.jpeg'); ?>">
+      <img src="<?php echo get_theme_file_uri('/images/banner1.jpg'); ?>">
       <div class="container">
         <div class="carousel-caption">
         </div>
       </div>
     </div>
     <div class="item">
-      <img src="<?php echo get_theme_file_uri('/images/home_cleaning.jpeg'); ?>">
+      <img src="<?php echo get_theme_file_uri('/images/banner2.jpg'); ?>">
       <div class="container">
         <div class="carousel-caption">
           
@@ -28,7 +28,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="item">
-      <img src="<?php echo get_theme_file_uri('/images/programming.jpg'); ?>">
+      <img src="<?php echo get_theme_file_uri('/images/banner3.jpg'); ?>">
       <div class="container">
         <div class="carousel-caption">
           
@@ -36,7 +36,6 @@ get_header(); ?>
       </div>
     </div>
   </div>
-
 
 <form class="col-sm-12" id="searchForm">
 <div class="search_welcom text-center">
@@ -95,7 +94,7 @@ get_header(); ?>
 <!-- Project Categories end-->
 
 <!-- HOW IT WORKS -->
-<section class="container-fluid well section-howitworks">
+<section class="container-fluid well section-howitworks clearfix">
 <h1 class="headline headline--bold text-center how_it_works">How it Works</h1>
     <div class="row col-container">
         <div class="col-md-3 col-sm-6 find">
@@ -139,26 +138,34 @@ get_header(); ?>
             </p>
        </div>
     </div>
+    <div class="row text-center js_ppbtn">
+        <div class="col-xs-12">
+            <a class="post_prjt_btn" href="<?php echo site_url('/post-a-project'); ?>">Post a Project</a>
+        </div>
+    </div>
 </section>
 <!-- HOW IT WORKS END -->
 
-
-
 <div class="container">
     <div class="row">
-        <div id="main" class="large-8 columns">
-
+        <div id="main" class="large-12 columns">
             <?php do_action( 'hrb_front_loops' ); ?>
-
-        </div><!-- end #main -->
-
-
-        <div id="sidebar" class="large-4 columns">
-
-            <div class="sidebar-widget-wrap cf">
-                <?php get_sidebar( app_template_base() ); ?>
-            </div><!-- end .sidebar-widget-wrap -->
-
-        </div><!-- end #sidebar -->
+        </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -56,6 +56,14 @@ jQuery(document).ready(function($){
         pay.css('visibility', 'visible');
     }, {offset: '70%'});
     
+// FRONT PAGE HOW IT WORKS- POST A PROJECT BTN
+    var post_prjt_btn = $('.js_ppbtn');
+    post_prjt_btn.css('visibility', 'hidden');
+    post_prjt_btn.waypoint(function() {
+        post_prjt_btn.addClass("animated zoomIn");
+        post_prjt_btn.css('visibility', 'visible');
+    }, {offset: '70%'});    
+    
     
 // Post a Project
     $("fieldset .collapse").removeClass("collapse");
