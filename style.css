@@ -19,9 +19,23 @@ Template: gietda-ustug
 
 *{box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
 clearfix::after{content: ""; clear: both; display: table;}
+body{
+        padding-top:60px;
+    }
+    /* fix padding under menu after resize and I m maintaining this media queries for adding class 'navbar-fixed-top */
+    @media screen and (max-width: 767px) {
+        body { padding-top: 50px; }
+    }
+    @media screen and (min-width:768px) and (max-width: 991px) {
+        body { padding-top: 60px; }
+    }
+    @media screen and (min-width: 992px) {
+        body { padding-top: 60px; }
+    }
 .bold{font-weight: bold}
 .navbar-default{ background: rgba(0, 6, 32, .95); border-color: #000620; }
 .navbar-right{ padding-top: 6px; }
+a.login-nxt, a.reg-nxt{ margin-top: 6px; }
 .site-header{ font-family: 'Raleway', sans-serif; font-weight: 400; }
 .navbar{ margin-bottom: 0px; }
 .navbar-brand-centered { position: absolute; left: 50%; display: block;
@@ -31,12 +45,13 @@ clearfix::after{content: ""; clear: both; display: table;}
 .navbar>.container-fluid .navbar-brand-centered {
     margin-left: -80px;
 }
+.current-menu-item a, .current-menu-item a:hover{
+    font-weight: bold;
+    border-bottom: 2px solid #FFF;
+    background: #070b1a !important;
+}
 #logo{ position: absolute; top: 50%; -webkit-transform: translateY(-50%);
     transform: translateY(-50%); max-width: 120px; height: auto;
-    box-shadow: 12px 0 15px -4px #010721, -12px 0 8px -4px #010721;
-    -moz-box-shadow: 12px 0 15px -4px #010721, -12px 0 8px -4px #010721;
-	-webkit-box-shadow: 12px 0 15px -4px #010721, -12px 0 8px -4px #010721;
-	-o-box-shadow: 12px 0 15px -4px #010721, -12px 0 8px -4px #010721;
 }
 @media only screen and (max-width: 767px){
     #logo{
@@ -63,17 +78,16 @@ clearfix::after{content: ""; clear: both; display: table;}
         border-bottom: 1px solid gray;
     }
 }
-.top-bar-section li a:not(.button){
-    background: #f8f8f8;
-    color: #FFF;
-}
+
 .top-bar-section ul li:hover>a{
     background: #061450 !important;
     color: #FFF;
 }
-.top-bar-section ul{ margin: -23px 0; }
+.top-bar-section ul{ margin: -23px 0; background-color: transparent; }
 .top-bar-section ul li{ list-style: none; }
-.top-bar-section li a:not(.button){ padding: 0 7px; background: rgba(0, 6, 32, .95); }
+.top-bar-section li a:not(.button){ color: #FFF; padding: 0 7px; 
+    background: transparent; 
+}
 
 @media only screen and (max-width: 767px) {
     .top-bar-section ul{
@@ -139,6 +153,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 /* HEADER BACKGROUND */
 .full-width .content-header{
     background: rgba(0, 6, 32, 1) !important;
+    display: none; 
 }
 /* Content Header */
 .full-width .content-header h3{ font-family: 'Roboto Condensed', sans-serif;
@@ -225,6 +240,10 @@ span.selected-currency{ width: 31px; }
 
 /* CATEGORY PAGE */
 .cat_page_srch_bar{ margin-top: 2rem; }
+.category-row .maincat-list > li > a{ text-transform: unset; }
+.category-row .subcat-list a{ text-transform: unset; font-size: .9rem; }
+.category-row ul li ul li:before{ font-size: .9rem; }
+.cat-item-count{ font-size: .9rem; }
 
 /* LOGIN REGISTRATION BOX, ALERT BOX */
 .log-in .register-box{ background-color: #053752; }
@@ -235,10 +254,8 @@ form input[type="submit"].button:not(.secondary):hover:not(:disabled), form inpu
 
 .alert-box.success{ background-color: #33878B; }
 
-
-
-
-
+/* FOOTER */
+li.cat_head_ftr{ list-style: none; }
 
 
 

@@ -39,23 +39,29 @@ get_header(); ?>
 
 <form class="col-sm-12" id="searchForm">
 <div class="search_welcom text-center">
-    <h1 class="headline headline--welcome">Welcome to Gietda Ustug!</h1>
-    <p class="sub-title">Do you want order a job or you need any help? Enter your command in the box bellow we will find a contractor.</p>
+    <h1 class="headline headline--welcome">Welcome to <?php bloginfo( 'name' ); ?>!</h1>
+    <p class="sub-title"><?php bloginfo( 'description' ); ?></p>
 </div>
 
 <form method="get" action="<?php echo esc_url( trailingslashit( home_url() ) ); ?>">
-    <div class="large-2 columns project-dropdown">
-        <?php the_hrb_search_dropdown( array( 'name' => 'drop-search' ) ); ?>
-    </div>
-    <input type="hidden" id="st" name="st" value="<?php echo esc_attr( hrb_get_search_query_var('st') ? hrb_get_search_query_var('st') : HRB_PROJECTS_PTYPE ); ?>">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="large-2 columns project-dropdown">
+                    <?php the_hrb_search_dropdown( array( 'name' => 'drop-search' ) ); ?>
+                </div>
+                    <input type="hidden" id="st" name="st" value="<?php echo esc_attr( hrb_get_search_query_var('st') ? hrb_get_search_query_var('st') : HRB_PROJECTS_PTYPE ); ?>">
 
-    <div class="large-9 columns search-field">
-        <input type="text" id="search" placeholder="<?php echo __( 'Search', APP_TD ); ?>" name="ls" class="text search" value="<?php esc_attr( hrb_output_search_query_var('ls') ); ?>" />
+                <div class="large-10 columns search-field">
+                    <input type="text" id="search" placeholder="<?php echo __( 'Search', APP_TD ); ?>" name="ls" class="text search" value="<?php esc_attr( hrb_output_search_query_var('ls') ); ?>" />
 
-        <div class="search-btn">
-            <span class="search-button">
-                <button type="submit" id="search-submit" class="search-button"><?php echo __( 'Search', APP_TD ); ?></button>
-            </span>
+                    <div class="search-btn">
+                        <span class="search-button">
+                            <button type="submit" id="search-submit" class="search-button"><?php echo __( 'Search', APP_TD ); ?></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </form>

@@ -1,6 +1,5 @@
 buyers:
     Username:   marlene   
-    Email:      marlene-mcbride@gmail.com
     Password:   *4T*gw9S*gwq98EX82
     
     

@@ -64,7 +64,6 @@ jQuery(document).ready(function($){
         post_prjt_btn.css('visibility', 'visible');
     }, {offset: '70%'});    
     
-    
 // Post a Project
     $("fieldset .collapse").removeClass("collapse");
     
