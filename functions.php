@@ -5,6 +5,7 @@ function shihab_files() {
     wp_enqueue_style( 'shihab_main_styles', get_stylesheet_uri(), NULL, microtime() );
     wp_enqueue_style( 'normalizecss', get_theme_file_uri('/css/normalize.css') );
     wp_enqueue_style( 'animate', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css' );
+    wp_enqueue_style( 'font-awesome', get_theme_file_uri('/css/font-awesome.min.css') );
     
     wp_enqueue_style('roboto-font', '//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i');
     wp_enqueue_style( 'railway-font', '//fonts.googleapis.com/css?family=Raleway:300,400' );
@@ -20,6 +21,13 @@ function shihab_files() {
     
 }
 add_action( 'wp_enqueue_scripts', 'shihab_files' );
+
+
+function shihab_prefix_setup() {
+	add_theme_support( 'custom-logo' ); // custom logo
+
+}
+add_action( 'after_setup_theme', 'shihab_prefix_setup' );
 
 
 

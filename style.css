@@ -277,7 +277,19 @@ form input[type="submit"].button:not(.secondary):hover:not(:disabled), form inpu
 
 /* FOOTER */
 li.cat_head_ftr{ list-style: none; }
-#footer{ background-color: rgba(0, 6, 32, .95 ); }
+footer{ background-color: rgba(0, 6, 32, .95 ); color: #FFF;}
+footer a{color: #FFF; font-size: .8rem; }
+footer p{margin-bottom: .5rem; font-size: .8rem; }
+footer a:hover{color: #FFF; }
+.footer-row{ padding-top: 3.5rem; }
+.footer-col-1 img{max-width: 100px; height: auto; margin-bottom: 1.5rem; }
+.social-icon-footer a{ font-size: 1.2rem; margin-right: .9rem; transition: color 0.5s ease;}
+.social-icon-footer a:last-child{ margin-right: 0px; }
+.social-icon-footer a:hover{color: #51619f}
+
+.footer-col-2 h5, .footer-col-3 h5, .footer-col-4 h5{
+    color: #FFF;
+}
 
 
 
