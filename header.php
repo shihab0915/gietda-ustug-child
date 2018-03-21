@@ -4,6 +4,11 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1" >
     <?php wp_head(); ?>
+    <style>
+        .ifc-launcher-welcome-box, .ifc-launcher-button{background: rgba(0, 6, 32, .95) !important; border: 3px solid #FFF !important; }
+        .ifc-launcher-welcome-box:after{display: none;}
+        .ifc-launcher-welcome-header{background: transparent !important; }
+    </style>
 </head>
 <body <?php body_class(); ?>>
     
@@ -50,6 +55,7 @@
                 </li>
           <?php } ?>
         </li>
+        
         <!-- Show this nav when page=register/login -->
         <?php if( is_page('register') || is_page('login') ) { ?>
             <li <?php if( is_page('login') ) echo 'class="current-menu-item"' ?>><a class="login-nxt" href="<?php echo wp_login_url(); ?>">Login</a></li>
@@ -58,7 +64,13 @@
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-           <li <?php if( is_page('how-it-works') ) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/how-it-works'); ?>">How it Works</a></li>
+         <?php 
+            if(is_user_logged_in()){ ?>
+                <li><a href="<?php echo wp_logout_url(); ?>">Logout</a></li>
+            <?php }
+          ?>
+          
+           <li id="hellot" <?php if( is_page('how-it-works') ) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/how-it-works'); ?>">How it Works</a></li>
            <li <?php if( is_page('categories') ) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/categories'); ?>">Categories</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

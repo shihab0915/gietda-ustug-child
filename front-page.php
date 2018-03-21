@@ -100,7 +100,7 @@ get_header(); ?>
 <!-- Project Categories end-->
 
 <!-- HOW IT WORKS -->
-<section class="container-fluid well section-howitworks clearfix">
+<section class="container-fluid well well--main-bg section-howitworks clearfix">
 <h1 class="headline headline--bold text-center how_it_works">How it Works</h1>
     <div class="row col-container">
         <div class="col-md-3 col-sm-6 find">
