@@ -22,14 +22,8 @@ function shihab_files() {
 }
 add_action( 'wp_enqueue_scripts', 'shihab_files' );
 
-
 function shihab_prefix_setup() {
 	add_theme_support( 'custom-logo' ); // custom logo
-
 }
 add_action( 'after_setup_theme', 'shihab_prefix_setup' );
-
-
-
-
 

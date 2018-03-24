@@ -72,8 +72,6 @@
 						<select name="role">
 							<option value="<?php echo esc_attr( HRB_ROLE_EMPLOYER ); ?>" selected="selected"><?php echo __( 'Employer', APP_TD ); ?></option>
 							<option value="<?php echo esc_attr( HRB_ROLE_FREELANCER ); ?>"><?php echo __( 'Freelancer', APP_TD ); ?></option>
-							<!-- Newly added -->
-							<option value="<?php echo esc_attr( HRB_ROLE_FREELANCER ); ?>"><?php echo __( 'Firm', APP_TD ); ?></option>
 							<?php if ( $hrb_options->share_roles_caps ): ?>
 								<option value="<?php echo esc_attr( HRB_ROLE_BOTH ); ?>"/> <?php echo __( 'Both', APP_TD ) ?></option>
 							<?php endif; ?>

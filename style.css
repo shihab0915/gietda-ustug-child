@@ -274,6 +274,7 @@ form input[type="submit"].button:not(.secondary):hover:not(:disabled), form inpu
 }
 
 .alert-box.success{ background-color: #33878B; }
+form.custom .custom.dropdown .selector:after{border-color: #000 transparent transparent transparent !important}
 
 /* FOOTER */
 li.cat_head_ftr{ list-style: none; }
