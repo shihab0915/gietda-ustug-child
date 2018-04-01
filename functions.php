@@ -27,3 +27,85 @@ function shihab_prefix_setup() {
 }
 add_action( 'after_setup_theme', 'shihab_prefix_setup' );
 
+
+//=========Registration=========
+// display the custom fields
+function at_custom_fields() {?>
+<div class="row">
+    <fieldset class="at_fieldset large-4 small-12 columns form-field user-role-type">	 
+     <label for="at_referral"><?php _e( 'Please select Employer/Freelancer Type', 'appthemes' ); ?></label><br/>
+        <select name="at_referral" id="at_referral">
+    <!--       <option value=""></option>-->
+          <option value="Individual" <?php echo selected ( isset( $_POST['at_referral'] ) && 'Individual' == $_POST['at_referral'] ); ?> ><?php _e('Individual', 'appthemes'); ?></option>
+          <option value="Company" <?php echo selected ( isset( $_POST['at_referral'] ) && 'Company' == $_POST['at_referral'] ); ?> ><?php _e('Company', 'appthemes'); ?></option>
+        </select>
+    </fieldset>	
+</div>
+    <style type="text/css">
+	.at_fieldset { border: 1px solid #ccc; padding: 10px; border-radius: 5px; }
+	.at_number { width: 100px }
+    </style>
+<?php }
+// display the custom fields on registration form
+add_action( 'register_form', 'at_custom_fields' );
+
+// register the extra fields as user metadata
+function at_register_custom_fields( $user_id, $password = "", $meta = array() )  {
+ 
+	// custom fields
+	$fields = array(
+		'at_referral',
+	);
+        // cleans and updates the custom fields
+	foreach ( $fields as $field ) {
+	    $value = stripslashes( trim( $_POST[$field] ) ) ;
+	    if ( ! empty( $value ) ) {
+	  	 update_user_meta( $user_id, $field, $value );
+	    }
+	}
+ 
+}
+// save the custom fields to the database as soon as the user is registered on the database
+add_action( 'user_register', 'at_register_custom_fields' );
+
+// display custom fields/values on the backend or frontend
+function at_custom_fields_display( $user ) {
+   $user_id = $user->ID;
+?>
+   <?php if ( is_admin() ) { ?>
+        <!-- // show the backend HTML -->
+ 
+<table class="form-table">
+    <tr>
+        <th><label for="at_referral"><?php _e( 'Please select Employer/Freelancer Type', 'appthemes' ); ?></label></th>
+    <td>
+        <strong><?php echo get_user_meta( $user_id, 'at_referral', true ) ; ?></span>
+    </td>
+    </tr>		
+</table>
+ 
+	<?php } else { ?>
+ 
+        <!-- // show the frontend HTML -->
+
+	
+<fieldset>
+   <p>
+      <label for="at_referral"><?php _e( 'Your Employer/Freelancer Type', 'appthemes' ); ?></label>			
+      <strong><?php echo get_user_meta( $user_id, 'at_referral', true ) ; ?></strong>
+    </p>
+</fieldset>
+ 
+	<?php } ?>
+<?php
+}
+// display the custom fields on the user profile page (frontend and admin)
+add_action( 'show_user_profile', 'at_custom_fields_display' ); // frontend
+add_action( 'edit_user_profile', 'at_custom_fields_display' ); // backend
+
+
+
+
+
+
+

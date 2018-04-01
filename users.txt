@@ -1,12 +1,17 @@
 buyers:
     Username:   marlene   
     Password:   *4T*gw9S*gwq98EX82
+    email:      marlenelao719@gmail.com
+    Mobile:     01723 099 942
     
     
 sellers:
     Username:   diane   
-    Email:      diane1984@gmail.com
+    Email:      loremipsum185@gmail.com
     Password:   cUNt5OAzH(e%vqdpDh
+    Mobile:     01883-757593
+    
+    
     
 
 

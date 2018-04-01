@@ -9,8 +9,13 @@
         .ifc-launcher-welcome-box:after{display: none;}
         .ifc-launcher-welcome-header{background: transparent !important; }
     </style>
+    <script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = "80%" 
+        }
+    </script>
 </head>
-<body <?php body_class(); ?>>
+<body onload="zoom()" <?php body_class(); ?>>
     
 <header class="site-header">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,4 +81,21 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<?php
+    $user = wp_get_current_user();
+    
+    if( get_the_ID() == 99 || is_page('how-it-works') || is_page('categories') ){
+        if( in_array('administrator', (array) $user->roles) || in_array('employer', (array) $user->roles) ) { ?>
+   <nav class="navbar ui-message">
+        <span class="glyphicon glyphicon-remove ui-close" aria-hidden="true"></span>
+        <p>Do you need to discuss about your project with <span class="ui-fr">Freelancers</span> at the pre-hiring stage? <span><a href="<?php echo site_url('/messages'); ?>" target="_blank">Click Here</a></span></p>  
+    </nav>
+            
+        <?php }
+    }
+?>
+    
+
+        
+
 </header>

@@ -67,6 +67,12 @@ jQuery(document).ready(function($){
 // Post a Project
     $("fieldset .collapse").removeClass("collapse");
     
+// Private message popup
+    $(".ui-close").click(function(){
+        $(this).parents(".ui-message").fadeOut();
+    });
+    
+    
     
 });
 

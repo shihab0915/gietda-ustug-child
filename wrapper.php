@@ -23,9 +23,13 @@
 	<?php appthemes_after_header(); ?>
 
 
-<?php if(is_page('home')) { ?>
+<?php if( is_page('home') ) { ?>
     
     <?php do_action( 'hrb_content_container_top' ); ?>
+    <?php do_action( 'appthemes_notices' ); ?>
+    <?php load_template( app_template_path() ); ?>
+    
+<?php } elseif( is_page('messages') ){ ?>
     <?php do_action( 'appthemes_notices' ); ?>
     <?php load_template( app_template_path() ); ?>
     
