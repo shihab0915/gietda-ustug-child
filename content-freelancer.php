@@ -11,14 +11,6 @@
 		<div class="large-9 columns">
 			<h2 class="freelancer-header">
 				<?php the_hrb_user_display_name( $user ); ?>
-				
-<!--shihab-->
-<?php
-                $user = get_user_by( 'email', 'user@example.com' );
-                print_r($user);
-?>
-<?php echo get_user_meta( 25, 'at_referral', true ) ; ?>
-				
 				<?php if ( $user->hrb_location ): ?>
 					<span class="freelancer-loc"><i class="icon i-user-location"></i><?php the_hrb_user_location( $user ); ?></span>
 				<?php endif; ?>

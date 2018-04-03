@@ -9,13 +9,9 @@
         .ifc-launcher-welcome-box:after{display: none;}
         .ifc-launcher-welcome-header{background: transparent !important; }
     </style>
-    <script type="text/javascript">
-        function zoom() {
-            document.body.style.zoom = "80%" 
-        }
-    </script>
+
 </head>
-<body onload="zoom()" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
     
 <header class="site-header">
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
