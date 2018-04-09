@@ -55,8 +55,13 @@
                     </a>
                 </li>
           <?php } ?>
+
         </li>
+        <?php if( is_user_logged_in() ){ ?>
+          <li class="pvt-mssg-menu"><a href="<?php echo site_url('messages'); ?>">Messages</a></li>
+        <?php } ?>
         
+    
         <!-- Show this nav when page=register/login -->
         <?php if( is_page('register') || is_page('login') ) { ?>
             <li <?php if( is_page('login') ) echo 'class="current-menu-item"' ?>><a class="login-nxt" href="<?php echo wp_login_url(); ?>">Login</a></li>

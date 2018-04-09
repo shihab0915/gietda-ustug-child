@@ -326,6 +326,9 @@ h1.pvt-mssg--title{
     text-align: center; font-family: 'Roboto Condensed', sans-serif; font-weight: 300;
     color: #FFF; font-style: italic; text-shadow: 2px 2px 2px #000;
 }
+li.pvt-mssg-menu a{
+    margin-top: 5px;
+}
 
 
 /* PRIVATE MESSAGE END */
@@ -342,3 +345,28 @@ ul.right li:last-child:not(.hrb-register) {display: none}
 
 /* DROP DOWN FOR SEARCH FREELANCER, PROJECTS */
 .f-dropdown{background: rgba(0, 6, 32, .95);}
+
+/* EDIT PROFILE */
+.gieta_edit_user .dashboard > h2, .edit-profile > h2{ text-decoration: underline; }
+
+.gieta_edit_user #gieta_upload_photo{
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+.gieta_edit_user #profile-form .upload-gravatar .media-manager{
+        border: 1px solid #000620;
+}
+.gieta_edit_user #profile-form .upload-gravatar .media-manager{
+    padding: .1em .1em;
+}
+
+.gieta_edit_user #profile-form .upload-gravatar .media-manager .button{
+    position: absolute; left: 50%; transform: translateX(-50%); bottom: -30px;
+    background: transparent; color: #000; border: 1px solid #000620;
+}
+.gieta_edit_user button.small, .button.small{ padding: 2px 15px }
+.gieta_edit_user .edit-profile .form-wrapper{border-top: none; }
+.gieta_edit_user .create-project form.custom .custom.dropdown .selector:after, .order-checkout form.custom .custom.dropdown .selector:after, #load-saved-filter-form .custom.dropdown .selector:after, #profile-form .custom.dropdown .selector:after{
+    border-color: #FFFFFF transparent transparent transparent !important;
+}
+
+/* EDIT PROFILE END */
